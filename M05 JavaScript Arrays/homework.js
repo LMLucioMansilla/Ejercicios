@@ -26,7 +26,7 @@ function incrementarPorUno(array) {
       array[i] = (array [i] + 1);
    } return array
 }
-
+// Se puede resolver con forEach
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
@@ -60,6 +60,11 @@ function dePalabrasAFrase(palabras) {
    string = string + palabras[i] + " "
   } return string
 }
+// return palabras.join(" ")
+// otro
+// return palabras.reduce(function(acc,el){
+//   return acc + " " + el; 
+//})
 
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
@@ -67,14 +72,20 @@ function arrayContiene(array, elemento) {
    // Tu código:
 return array.includes(elemento) 
 }
+// for (i = 0 ; i<=array.length;i++){
+//   if (array[i]===elemento){
+//   return true
+//} return false
+//}
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
-   var suma= arrayOfNums.map(arguments + arguments);
-   return suma
-   
+  var suma = arrayOfNums.reduce(function(acc,el){
+  return acc + el
+  })
+  return suma
    
 }
 
@@ -82,6 +93,10 @@ function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   var suma = 0;
+   for (var i = 0; i<=resultadosTest; i++){
+      suma = suma + resultadosTest[i]; 
+   } return suma / resultadosTest.length
 
 }
 
@@ -165,8 +180,11 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
-tabla = [;
-   for (var= 0; i <=60; 6++)
+   var multiplicador = 1;
+var tabla = [];
+   for (var i = 0; i <= 60; i++){
+     tabla * i; tabla.push()
+   } return tabla
 
 
 }
